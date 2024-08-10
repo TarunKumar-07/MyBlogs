@@ -1,0 +1,30 @@
+<%- include('./partials/header.ejs') %>
+    <div class="container">
+      <div class="card">
+        <a href="/"><img class="mb" src="images/logo.png" width="80px" alt="" /></a>
+        <h2>Register Form</h2>
+        <form action="/register" method="post">
+          <label for="fullname">Username</label>
+          <input type="text" name="username" placeholder="Enter your username" />
+          <label for="fullname">Full Name</label>
+          <input type="text" name="fullname" placeholder="Enter your full name" />
+          <label for="email">Email</label>
+          <input type="email" name="email" placeholder="Enter your email" />
+
+          <label for="password">Password</label>
+          <input
+            type="password"
+            name="password"
+            placeholder="Enter your password"
+          />
+
+          <button type="submit">Register</button>
+        </form>
+        <div class="switch">
+          Already have an account?
+          <a href="/login">Login here</a>
+        </div>
+      </div>
+    </div>
+</div>
+<%- include('./partials/footer.ejs') %>

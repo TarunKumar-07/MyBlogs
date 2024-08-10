@@ -1,0 +1,49 @@
+<%- include('./partials/header.ejs') %> <%- include('./partials/navbar.ejs') %>
+<div class="max-width-1 m-auto">
+  <hr />
+</div>
+<div class="m-auto content max-width-1 my-2">
+  <div class="content-left">
+    <h1>The heaven for bloggers</h1>
+    <p>
+      MyBlogs is a website which lets you submit an article which upon approval
+      will be up on our website and you can get a good amount of reach from
+      here!
+    </p>
+    <p>
+      My Halloween decorations are staying in the box this year. To be honest,
+      they didn’t make it out of the box last year either. My Halloween spirit
+      has officially been bludgeoned to death by teenagers who no longer care
+      and a persistent October fear of the Northern California wildfires. And
+      speaking of fear, isn’t there more than enough of that going around? Maybe
+      all of us can pretend that Halloween isn’t even happening this year?
+    </p>
+  </div>
+  <div class="content-right">
+    <img src="images/home.svg" alt="MyBlogs" />
+  </div>
+</div>
+
+<div class="max-width-1 m-auto">
+  <hr />
+</div>
+<div class="home-articles max-width-1 m-auto font2">
+  <h2>Featured Articles</h2>
+  <% blogs.forEach(function(blog){ %>
+  <div class="home-article">
+    <div class="home-article-img">
+      <img src="images/3.png" alt="article" />
+    </div>
+    <div class="home-article-content font1">
+      <a href="/blogpost">
+        <h3><%= blog.title %></h3>
+        <h4><%= blog.user.fullname %></h4>
+      </a>
+      <h4><%= blog.content %></h4>
+      <h5><%= blog.createdAt.toLocaleDateString() %></h5>
+    </div>
+  </div>
+  <% }) %>
+</div>
+
+<%- include('./partials/footer.ejs') %>

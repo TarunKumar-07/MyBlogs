@@ -1,0 +1,40 @@
+<%- include('./partials/header.ejs') %> <%- include('./partials/navbar.ejs') %>
+<div class="max-width-1 m-auto">
+  <hr />
+</div>
+<div class="contact-content font1 max-width-1 m-auto">
+  <div class="max-width-1 m-auto mx-1">
+    <h2>Feel Free to Contact Us</h2>
+    <div class="contact-form">
+      <form action="/contact" method="post">
+        <div class="form-box">
+          <input type="text" placeholder="Enter Your Name" name="name" />
+        </div>
+        <div class="form-box">
+          <input
+            type="text"
+            placeholder="Enter Your Phone Number"
+            name="phone_number"
+          />
+        </div>
+        <div class="form-box">
+          <input type="text" placeholder="Enter Your Email Id" name="email" />
+        </div>
+        <div class="form-box">
+          <textarea
+            name=""
+            id=""
+            cols="30"
+            rows="10"
+            placeholder="How may we help you?"
+            name="query"
+          ></textarea>
+        </div>
+        <div class="form-box">
+          <button class="btn">Submit</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+<%- include('./partials/footer.ejs') %>

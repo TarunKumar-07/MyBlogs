@@ -1,0 +1,23 @@
+.newblog {
+  /* padding: 10px 100px; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.newsubmit {
+  width: fit-content;
+  background-color: orangered;
+  /* width: 50px; */
+  font-size: 20px;
+}
+
+.nbct {
+  border: 2px solid orangered;
+  max-width: 60vw;
+  font-size: 25px;
+}
+.nbcc {
+  font-size: 20px;
+  max-width: 60vw;
+  height: 45vh;
+}

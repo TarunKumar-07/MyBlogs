@@ -1,0 +1,34 @@
+<nav class="navigation max-width-1 m-auto">
+  <div class="nav-left">
+    <ul>
+      <li>
+        <a href="/blogs">
+          <img src="images/logo.png" width="94px" alt="" />
+        </a>
+      </li>
+      <% if (loggedIn) { %>
+      <li><a href="/blogs">Blogs</a></li>
+      <li><a href="/contact">Contact</a></li>
+      <li><a href="/profile">Profile</a></li>
+      <% } %>
+    </ul>
+  </div>
+  <div class="nav-right">
+    <form action="/search" method="get" class="navform">
+      <input
+        class="form-input"
+        type="text"
+        name="search"
+        placeholder="Article Search"
+      />
+      <button class="btn">Search</button>
+    </form>
+    <div>
+      <% if (loggedIn) { %>
+      <a href="/logout" class="loginout">LogOut</a>
+      <% } else { %>
+      <a href="/login" class="loginout">Login</a>
+      <% } %>
+    </div>
+  </div>
+</nav>
